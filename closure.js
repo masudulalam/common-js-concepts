@@ -104,23 +104,39 @@ function myFunction2 () {
 myFunction2();
 
 // A counter dilemma
-let counter = 0;
+// let counter = 0;
 // console.log(counter);
 
 // Function to increment counter
 function add () {
+  let counter = 0;
   counter += 1;
-  // return counter;
+  return counter;
 }
 
 // Call add 3 times
 add();
-// console.log(counter);
+// console.log(add());
 add();
-// console.log(counter);
+// console.log(add());
 add();
-console.log(counter);
+// console.log(add());
 
+// counter++;
+// console.log(counter);
+
+
+// Nested function
+function add2 (){
+  let counter = 0;
+  function plus () {
+    counter += 1;
+  }
+  plus();
+  return counter;
+}
+
+console.log(add2());
 
 
 
