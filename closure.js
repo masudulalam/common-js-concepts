@@ -32,14 +32,14 @@ function stopWatch () {
 
 // Step 1: is for understanding closure
 // ---------------------------------
-function add(){
-    let counter = 0;
-    counter += 1;
-    return counter;
-}
-add();
-add();
-add();
+// function add(){
+//     let counter = 0;
+//     counter += 1;
+//     return counter;
+// }
+// add();
+// add();
+// add();
 // console.log(counter);
 // counter++;
 // console.log(counter);
@@ -77,6 +77,49 @@ var account = bankAccount(100000);
 // console.dir(account);
 console.log(account());
 // console.log(balance);
+
+
+// stop watch:
+// function stopWatch (){
+//   var startTime = Date.now();
+
+//   function getDelay(){
+//     console.log(Date.now() - startTime);
+//   }
+
+//   return getDelay;
+// }
+
+
+// variable lifetime
+let a = 4;
+function myFunction () {
+  return a * a;
+}
+myFunction();
+
+function myFunction2 () {
+  return a + a;
+}
+myFunction2();
+
+// A counter dilemma
+let counter = 0;
+// console.log(counter);
+
+// Function to increment counter
+function add () {
+  counter += 1;
+  // return counter;
+}
+
+// Call add 3 times
+add();
+// console.log(counter);
+add();
+// console.log(counter);
+add();
+console.log(counter);
 
 
 
