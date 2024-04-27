@@ -108,18 +108,18 @@ myFunction2();
 // console.log(counter);
 
 // Function to increment counter
-function add () {
-  let counter = 0;
-  counter += 1;
-  return counter;
-}
+// function add () {
+//   let counter = 0;
+//   counter += 1;
+//   return counter;
+// }
 
 // Call add 3 times
-add();
+// add();
 // console.log(add());
-add();
+// add();
 // console.log(add());
-add();
+// add();
 // console.log(add());
 
 // counter++;
@@ -127,16 +127,24 @@ add();
 
 
 // Nested function
-function add2 (){
+function temporary (){
   let counter = 0;
-  function plus () {
+  
+  return function plus () {
     counter += 1;
-  }
-  plus();
-  return counter;
+    // console.log('hello');
+  };
 }
 
-console.log(add2());
+const add = temporary();
+
+console.dir(add);
+add();
+// console.dir(add);
+add()
+// console.dir(add);
+// add()
+// console.dir(add);
 
 
 
