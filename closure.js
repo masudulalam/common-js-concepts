@@ -46,20 +46,42 @@ add();
 
 // -------------------------------------------
 
-// Step 2: is for understanding closure
+// Step 2: for understanding closure
 // ---------------------------------------------
-var num1 = 2;
 
+var num1 = 2;
+var num2 = 3;
 
 var sum = function () {
-  var num2 = 3;
-  return function(){
-    return num1 + num2;
-  }
+  return num1 + num2;
 };
 
-var myFunction = sum();
-console.dir(myFunction);
+console.log(sum());
+console.dir(sum);
+
+
+
+// --------------------------
+
+// Step 3: for understanding closure
+// ---------------------------
+
+function bankAccount (initialBalance) {
+  var balance = initialBalance;
+  return function () {
+    return balance;
+  }
+}
+
+var account = bankAccount(100000);
+// console.dir(account);
+console.log(account());
+// console.log(balance);
+
+
+
+
+
 
 
    
