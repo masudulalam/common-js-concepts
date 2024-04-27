@@ -49,8 +49,8 @@ add();
 // Step 2: for understanding closure
 // ---------------------------------------------
 
-var num1 = 2;
-var num2 = 3;
+let num1 = 2;
+let num2 = 3;
 
 var sum = function () {
   return num1 + num2;
