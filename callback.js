@@ -1,5 +1,5 @@
-function greeting(param){
-   console.log(param());;
+function greeting(param, name){
+   param(name);
 }
 
 const name = 'Abdullah';
@@ -19,9 +19,16 @@ const laptop = {
 }
 
 function greetingHandler(name){
-    console.log('As salamu alikum wa rahmatullah');
+    console.log('As salamu alikum wa rahmatullah', name);
+}
+function greetWelcome(name){
+    console.log('Ahlan sahlan marhaban mubarakan', name);
 }
 
 
 
-greeting(greetingHandler);
+greeting(greetingHandler, 'Masud');
+greeting(greetingHandler, 'Muhammad');
+greeting(greetingHandler, 'Alam');
+greeting(greetWelcome, 'Abdullah');
+greeting(greetWelcome, 'Abdur Rahman');
