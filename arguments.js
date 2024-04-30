@@ -1,5 +1,5 @@
 function sum(a, b, c){
-    console.log(arguments);
+    console.log(arguments[5]);
     const result = a + b + c;
     return result;
 }
